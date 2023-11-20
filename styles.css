@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+  background: #0c111b;
+  overflow-y: scroll;
+}
+
+.E-Summit-Photo {
+  width: 90%; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  margin-top: 300px;
+  border-radius: 15px; /* Adjust the border radius as needed */
+  background-image: url("Images/E-Summitdesign.png"); /* Specify the path to your image */
+  background-size: cover; /* Scale the image to cover the entire rectangle */
+  background-position: center;
+
+  box-shadow: 10px 10px 10px rgba(122, 162, 185, 0.2);
+  position: relative;
+}
+.E-Summit-Photo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 55, 55, 0.5); /* Adjust the RGB values and opacity (0.5) as needed */
+  border-radius: 15px;
+}
+.background-slider {
+  display: flex;
+  width: 300%; /* Adjust based on the number of images */
+  height: 100%;
+  animation: slide 9s infinite; /* Adjust the animation duration as needed */
+}
+.slide {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+.bg-events {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("Images/BG1.JPG"); /* Specify the path to the background image */
+  background-size: cover; /* Scale the background image to cover the entire container */
+  z-index: -1; /* Place the background behind the rectangle */
+}
+.section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg1 {
+  background-color: #ccc;
+  font-weight: 600;
+}
+
+.bg2 {
+  background-color: #333;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spacer {
+  height: 50vh;
+  background-color: #000;
+}
